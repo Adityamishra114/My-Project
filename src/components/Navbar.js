@@ -32,7 +32,7 @@ const NavLink = css`
     } 
 
   &:hover {
-    background: black;
+    background: #e81038;
     border-radius: 12px;
   }
 `;

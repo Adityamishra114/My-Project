@@ -1,6 +1,5 @@
 import React,{ useState , useRef, useEffect} from "react";
 import styled, { css } from "styled-components/macro";
-import SliderData from "../data/SliderData";
 import { Button } from "./Button";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 
@@ -56,7 +55,8 @@ top: 0;
 left: 0;
 width:100vw;
 height:100vh;
-object-fit:cover;
+// object-fit:cover;
+object-fit: fill;
 opacity:0.9;
 `;
 const HeroContent = styled.div`
@@ -72,6 +72,7 @@ align-items:center;
 color:#000;
 
 
+
 h1{
   font-size:clamp(1rem, 8vw, 3.5rem);
   font-weight:400;
@@ -79,7 +80,7 @@ h1{
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   text-align:center;
   margin-bottom:0.8rem;
-  color:white;
+  color:#d6200f;
 }
 p{
   margin-bottom:1.2rem;
@@ -92,10 +93,53 @@ const SliderButtons = styled.div`
   bottom: 50px;
   right: 50px;
   display: flex;
-  z-index: 10;
+  z-index: 10; 
 `;
 
-const arrowButtons = css`
+// const arrowButtons = css`
+//   width: 50px;
+//   height: 50px;
+//   color: #fff;
+//   cursor: pointer;
+//   background: #000d1a;
+//   border-radius: 50px;
+//   padding: 10px;
+//   margin-right: 1rem;
+//   user-select: none;
+//   transition: 0.3s;
+ 
+ 
+ 
+
+//   &:hover {
+//     background: #cd853f;
+//     transform: scale(1.05);
+//   }
+// `;
+const PrevArrow = styled(IoArrowBack)`
+
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  background: #000d1a;
+  border-radius: 50px;
+  padding: 10px;
+  margin-right: 76rem;
+  user-select: none;
+  transition: 0.3s;
+ 
+ 
+ 
+
+  &:hover {
+    background: #cd853f;
+    transform: scale(1.05);
+  }
+`;
+
+const NextArrow = styled(IoArrowForward)`
+
   width: 50px;
   height: 50px;
   color: #fff;
@@ -108,18 +152,12 @@ const arrowButtons = css`
   transition: 0.3s;
  
  
+ 
 
   &:hover {
     background: #cd853f;
     transform: scale(1.05);
   }
-`;
-const PrevArrow = styled(IoArrowBack)`
-  ${arrowButtons}
-`;
-
-const NextArrow = styled(IoArrowForward)`
-  ${arrowButtons}
 `;
 
 const Hero = ({ slides }) => {
@@ -171,7 +209,8 @@ const Hero = ({ slides }) => {
                     to={slide.path}
                     primary="true"
                     css={`
-                      max-width: 160px;
+                      max-width: 240px;
+                      font-size:28px;
                     `}
                   >
                     {slide.label}

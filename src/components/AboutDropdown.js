@@ -1,8 +1,6 @@
-import React from 'react';
-import { FaTimes } from 'react-icons/fa';
-import styled from 'styled-components';
-import { menuData } from '../data/MenuData';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { AboutMenuData } from '../data/AboutMenuData';
+
 
 const DropdownContainer = styled.div`
 position: fixed;
@@ -18,20 +16,9 @@ transition: 0.3s ease-in-out;
 opacity: ${({isOpen}) => (isOpen ? '1' : '0')};
 top: ${({isOpen}) => (isOpen ? '0' : '-100%')};;
 `;
-const Icon = styled.div`
-position: absolute;
-top: 1.2rem;
-right: 1.5rem;
-background: transparent;
-font-size; 2rem;
-cursor: pointer;
-outline: none;
-`;
 
-const CloseIcon = styled(FaTimes)`
-color:#000dia;
-`;
 const DropdownWrapper = styled.div``;
+
 const DropdownMenu = styled.div`
 display: grid;
 grid-template-coloumns: 1fr;
@@ -58,26 +45,23 @@ transition: 0.2s ease-in-out;
 &:hover{
     color:#000d1a;
 }`;
-// const BtnWrap = styled.div``;
 
-const Dropdown = ({isOpen, toggle}) => {
+const AboutDropdown = ({isOpen, toggle}) => {
   return (
     <DropdownContainer isOpen={isOpen} onClick={toggle}>
-        <Icon onClick={toggle}>
-            <CloseIcon/>
-        </Icon>
-        <DropdownWrapper>
-            <DropdownMenu>
-                {menuData.map((item,index) => (
-                    <DropdownLink to={item.link} key={index}>
-                        {item.title}
-                    </DropdownLink>
-               ))}
-            </DropdownMenu>
-            
-        </DropdownWrapper>
-    </DropdownContainer>
+    
+    <DropdownWrapper>
+        <DropdownMenu>
+            {AboutMenuData.map((item,index) => (
+                <DropdownLink to={item.link} key={index}>
+                    {item.title}
+                </DropdownLink>
+           ))}
+        </DropdownMenu>
+        
+    </DropdownWrapper>
+</DropdownContainer>
   )
 }
 
-export default Dropdown;
+export default AboutDropdown;

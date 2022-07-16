@@ -1,7 +1,7 @@
-import ImageOne from '../images/ImageOne.JPG';
+import ImageOne from '../images/ImageOne.jpg';
 import ImageTwo from '../images/ImageTwo.JPG';
 import ImageThree from '../images/ImageThree.JPG';
-import Hero from '../components/Hero';
+
 
 
 export const SliderData = [

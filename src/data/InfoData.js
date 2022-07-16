@@ -1,3 +1,4 @@
+import { FaBold } from "react-icons/fa";
 import ImageFive from "../images/ImageFive.jpg";
 
 export const InfoData = {
@@ -8,4 +9,5 @@ export const InfoData = {
   image: ImageFive,
   reverse: false,
   delay: 100,
+  
 };
