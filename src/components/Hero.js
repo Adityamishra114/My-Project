@@ -94,6 +94,7 @@ const SliderButtons = styled.div`
   right: 50px;
   display: flex;
   z-index: 10; 
+  }
 `;
 
 // const arrowButtons = css`
@@ -129,8 +130,6 @@ const PrevArrow = styled(IoArrowBack)`
   user-select: none;
   transition: 0.3s;
  
- 
- 
 
   &:hover {
     background: #cd853f;
@@ -149,10 +148,7 @@ const NextArrow = styled(IoArrowForward)`
   padding: 10px;
   margin-right: 1rem;
   user-select: none;
-  transition: 0.3s;
- 
- 
- 
+  transition: 0.3s; 
 
   &:hover {
     background: #cd853f;

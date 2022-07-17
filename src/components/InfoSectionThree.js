@@ -28,9 +28,10 @@ const ColumnLeft = styled.div`
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 18rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
     font-faimly: "Montserrat", sans-sarif;
+    
   }
   @media screen and (max-width: 768px) {
     order: ${({ reverse }) => (reverse ? "1" : "2")};
@@ -44,19 +45,33 @@ const ColumnRight = styled.div`
   justify-content: center;
   align-items: flex-start;
   order: ${({ reverse }) => (reverse ? "1" : "2")};
+  
 
   @media screen and (max-width: 768px) {
     order: ${({ reverse }) => (reverse ? "2" : "1")};
     grid-template-columns: 1fr;
   }
+  
+    
+
+  
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 450px;
     object-fit: cover;
     // object-fit: fill;
     // margin-Bottom:7rem;
     // margin-top: 3rem;
+    position: relative;
+    animation: myfirst 5s infinite;
+  @keyframes myfirst{
+    0%   {left: 0px; top: 0px;}
+     25%  {left: 20px; top: 0px};
+     50%  {left: 20px; top: 20px};
+     75%  {left: 0px; top: 20px;};
+     100% {left: 0px; top: 0px;};
+   }
     
 
     @media screen and (max-width: 768px) {
