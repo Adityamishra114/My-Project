@@ -43,6 +43,7 @@ const NavMenuLinks = styled(Link)`
 let LogoImage = styled.img`
   background-image: url(../images/logo.png);
   cursor:pointer;
+ 
 `;
 
 const MenuBars = styled.div`
@@ -84,7 +85,7 @@ const Navbar = ({ toggle }) => {
   return (
     <Nav className={color ? "Nav_bg" : "Nav"}>
       {/* <img src={logo} alt="Logo" />; */}
-      <LogoImage  src={logo} />
+      <LogoImage  src={logo}  />
       <MenuBars onClick={toggle}>
         <FaBars />
       </MenuBars>

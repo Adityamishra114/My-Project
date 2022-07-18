@@ -28,7 +28,7 @@ const ColumnLeft = styled.div`
   align-items: flex-start;
   line-height: 1.4;
   padding: 1rem 2rem;
-  // margin-Bottom: 25rem;
+  margin-bottom:280px;
 
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
@@ -50,9 +50,11 @@ const ColumnRight = styled.div`
   // align-items: center;
   order: ${({ reverse }) => (reverse ? "1" : "2")};
 
-  @media screen and (max-width: 768px) {
-    order: ${({ reverse }) => (reverse ? "2" : "1")};
-  }
+  // @media screen and (max-width: 768px) {
+  //   // order: ${({ reverse }) => (reverse ? "2" : "1")};
+   
+  // }
+ 
 
   // img {
   //   width: 100%;
@@ -76,7 +78,7 @@ const InfoSection = ({ heading, paragraph, buttonLabel, image }) => {
         <ColumnLeft>
           <h1>{heading}</h1>
           <p>{paragraph}</p>
-          <Button to="/">
+          <Button className="btn-hover" to="/">
             {buttonLabel} <Arrow />
           </Button>
         </ColumnLeft>

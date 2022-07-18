@@ -15,5 +15,22 @@ html,body{
 .Nav_bg{
   background-color:#4aa832;
 }
+.head-text{
+  position:relative;
+  color:red;
+  
+}
+.center-text{
+  position:absolute;
+  top:70%;
+  left:80%;
+  width:fit-content;
+  transform: translate(-50%, -50%);
+}
+.btn-hover{
+  &:hover{
+    text-decoration:underline;
+  }
+}
 `;
 export default GlobalStyle;

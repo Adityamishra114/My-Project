@@ -25,19 +25,19 @@ const Container = styled.div`
   }
 `;
 const ColumnLeft = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: flex-start;
   line-height: 1.4;
   padding: 1rem 2rem;
-  // margin-Bottom: 25rem;
+  margin-top: 50%;
 
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
   p {
     margin-left: 10px;
-    margin-bottom: 12rem;
+    margin-bottom: 2rem;
     text-align: left;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
@@ -66,7 +66,7 @@ const ColumnRight = styled.div`
   img {
     height: 100%;
     width: 100%;
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -82,7 +82,6 @@ const Btn = styled.button`
   margin: 10px 5px;
   line-height: 1.5;
   cursor: pointer;
-  display"flex;
 
   &:hover {
     background-color: transparent;

@@ -5,14 +5,18 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { maxWidth } from "@mui/system";
 
 
 
 
 const InfoCard = () => {
+  const matches = useMediaQuery(
+    maxWidth = "md",
+  )
   return (<>
-      <Grid container spacing={2} sx={{flexDirection:'columns', justifyContent:'space-around', borderRadius:"50px",  position: "relative",
+      <Grid container spacing={2} matches= {matches} sx={{flexDirection:'columns', justifyContent:'space-around', borderRadius:"50px",  position: "relative",
   animation: "myfirst 5s infinite",
   animationDirection: "alternate",
 "@keyframes myfirst":{

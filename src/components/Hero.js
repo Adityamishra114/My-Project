@@ -2,6 +2,7 @@ import React,{ useState , useRef, useEffect} from "react";
 import styled, { css } from "styled-components/macro";
 import { Button } from "./Button";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
+import GlobalStyle from "../globalStyles";
 
 
 const HeroSection = styled.section`
@@ -74,19 +75,22 @@ color:#000;
 
 
 h1{
-  font-size:clamp(1rem, 8vw, 3.5rem);
+  font-size:clamp(1rem, 30px, 3rem);
   font-weight:400;
   text-transform:uppercase;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   text-align:center;
   margin-bottom:0.8rem;
   color:#d6200f;
-}
-p{
-  margin-bottom:1.2rem;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  padding: 1rem 30rem;
 
-}`;
+
+}
+// p{
+//   margin-bottom:1.2rem;
+//   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+
+// }`;
 
 const SliderButtons = styled.div`
   position: absloute;
@@ -95,6 +99,7 @@ const SliderButtons = styled.div`
   display: flex;
   z-index: 10; 
   }
+ 
 `;
 
 // const arrowButtons = css`
@@ -135,6 +140,10 @@ const PrevArrow = styled(IoArrowBack)`
     background: #cd853f;
     transform: scale(1.05);
   }
+  @media screen and (max-width: 768px) {
+    margin-right:1rem;
+    
+  }
 `;
 
 const NextArrow = styled(IoArrowForward)`
@@ -153,6 +162,9 @@ const NextArrow = styled(IoArrowForward)`
   &:hover {
     background: #cd853f;
     transform: scale(1.05);
+  }
+  @media screen and (max-width: 768px) {
+    margin-left:37rem;
   }
 `;
 
@@ -197,9 +209,9 @@ const Hero = ({ slides }) => {
           return (
             <HeroSlide key={index}>
               {index === current && (
-                <HeroSlider>
-                <HeroImage src={slide.image} alt={slide.alt}  />
-                <HeroContent>
+                <HeroSlider >
+                <HeroImage src={slide.image} alt={slide.alt} className="head-text" />
+                <HeroContent className="center-text">
                   <h1>{slide.title}</h1>
                   <Button
                     to={slide.path}
@@ -207,6 +219,10 @@ const Hero = ({ slides }) => {
                     css={`
                       max-width: 240px;
                       font-size:28px;
+                      border-radius:20px;
+                      &:hover {
+                        background-color: #f00a24;
+                      }
                     `}
                   >
                     {slide.label}
