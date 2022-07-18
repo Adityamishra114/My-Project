@@ -15,10 +15,11 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  top:0;
-  background:transparent;
+  top: 0;
+  background: transparent;
 `;
-
+// const Nav_bg = styled.css`
+// background-color:#4aa832;`;
 const NavLink = css`
   color: #fff;
   display: flex;
@@ -27,9 +28,9 @@ const NavLink = css`
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  &.active { 
-    color: #000000; 
-    } 
+  &.active {
+    color: #000000;
+  }
 
   &:hover {
     background: #e81038;
@@ -42,8 +43,7 @@ const NavMenuLinks = styled(Link)`
 `;
 let LogoImage = styled.img`
   background-image: url(../images/logo.png);
-  cursor:pointer;
- 
+  cursor: pointer;
 `;
 
 const MenuBars = styled.div`
@@ -85,7 +85,7 @@ const Navbar = ({ toggle }) => {
   return (
     <Nav className={color ? "Nav_bg" : "Nav"}>
       {/* <img src={logo} alt="Logo" />; */}
-      <LogoImage  src={logo}  />
+      <LogoImage to={"/"} src={logo} />
       <MenuBars onClick={toggle}>
         <FaBars />
       </MenuBars>

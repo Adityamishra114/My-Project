@@ -83,6 +83,12 @@ h1{
   margin-bottom:0.8rem;
   color:#d6200f;
   padding: 1rem 30rem;
+  
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    display:columns;
+    margin-right:60px;
+  }
 
 
 }
@@ -143,6 +149,7 @@ const PrevArrow = styled(IoArrowBack)`
   @media screen and (max-width: 768px) {
     margin-right:1rem;
     
+    
   }
 `;
 
@@ -165,6 +172,7 @@ const NextArrow = styled(IoArrowForward)`
   }
   @media screen and (max-width: 768px) {
     margin-left:37rem;
+    
   }
 `;
 

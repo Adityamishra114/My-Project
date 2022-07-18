@@ -1,6 +1,6 @@
 {
   "homepage": "https://Adityamishra114.github.io/My-Project",
-  
+  "name": "My-Project",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
