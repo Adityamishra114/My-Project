@@ -82,6 +82,7 @@ const Btn = styled.button`
   margin: 10px 5px;
   line-height: 1.5;
   cursor: pointer;
+  display"flex;
 
   &:hover {
     background-color: transparent;
