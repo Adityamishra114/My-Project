@@ -32,6 +32,15 @@ const ColumnLeft = styled.div`
   line-height: 1.4;
   padding: 1rem 2rem;
   margin-top: 50%;
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
 
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
@@ -44,10 +53,12 @@ const ColumnLeft = styled.div`
     font-size: 27px;
     line-height: 1.5;
     display: flex;
+    animation: 5s ease-out 4s 1 slideInFromLeft;
     order: ${({ reverse }) => (reverse ? "1" : "2")};
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
       order: ${({ reverse }) => (reverse ? "2" : "1")};
+      animation: 5s ease-out 4s 1 slideInFromLeft;
     }
   }
 `;
@@ -58,19 +69,30 @@ const ColumnRight = styled.div`
   // justify-content: center;
   // align-items: center;
   order: ${({ reverse }) => (reverse ? "1" : "2")};
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
   @media screen and (max-width: 768px) {
     order: ${({ reverse }) => (reverse ? "2" : "1")};
+    animation: 5s ease-out 4s 1 slideInFromLeft;
   }
 
   img {
     height: 100%;
     width: 100%;
     margin-left: 1rem;
+    animation: 5s ease-out 4s 1 slideInFromLeft;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     order: ${({ reverse }) => (reverse ? "2" : "1")};
+    animation: 5s ease-out 4s 1 slideInFromLeft;
   }
 `;
 const Btn = styled.button`
@@ -82,6 +104,7 @@ const Btn = styled.button`
   margin: 10px 5px;
   line-height: 1.5;
   cursor: pointer;
+  animation: 5s ease-out 4s 1 slideInFromLeft;
 
   &:hover {
     background-color: transparent;
