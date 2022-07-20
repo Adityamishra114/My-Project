@@ -5,7 +5,11 @@ import { menuData } from "../data/MenuData";
 // import { Button } from "./Button";
 import { FaBars } from "react-icons/fa";
 import logo from "../images/logo.png";
-import GlobalStyle from "../globalStyles";
+import NavDropdown from "./NavDropdown";
+
+
+
+
 
 const Nav = styled.nav`
   height: 70px;
@@ -18,8 +22,7 @@ const Nav = styled.nav`
   top: 0;
   background: transparent;
 `;
-// const Nav_bg = styled.css`
-// background-color:#4aa832;`;
+
 const NavLink = css`
   color: #fff;
   display: flex;
@@ -37,7 +40,8 @@ const NavLink = css`
     border-radius: 12px;
   }
 `;
-
+const Nav_bg = css`
+background-color:#4aa832;`;
 const NavMenuLinks = styled(Link)`
   ${NavLink}
 `;
@@ -73,6 +77,7 @@ const NavMenu = styled.div`
   }
 `;
 const Navbar = ({ toggle }) => {
+
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 70) {
@@ -83,18 +88,19 @@ const Navbar = ({ toggle }) => {
   };
   window.addEventListener("scroll", changeColor);
   return (
-    <Nav className={color ? "Nav_bg" : "Nav"}>
-      {/* <img src={logo} alt="Logo" />; */}
+    <Nav className={color ? " Nav, Nav_bg" : "Nav"}>
+      {/* <Link to='/'><img src={logo} alt="Logo" />;</Link> */}
       <LogoImage to={"/"} src={logo} />
-      <MenuBars onClick={toggle}>
+      <MenuBars onClick={toggle} >
         <FaBars />
       </MenuBars>
-      <NavMenu>
+      <NavMenu >
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
             {item.title}
           </NavMenuLinks>
         ))}
+        {/* <NavDropdown/> */}
       </NavMenu>
     </Nav>
   );
