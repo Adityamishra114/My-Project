@@ -10,8 +10,14 @@ import { InfoDataTwo } from './data/InfoDataTwo';
 import InfoSectionTwo from './components/InfoSectionTwo';
 import InfoSectionThree from './components/InfoSectionThree';
 import { InfoDataThree } from './data/InfoDataThree';
+import NavDropdown from './components/NavDropdown';
 
 import InfoCard from './components/InfoCard';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import InfoSectionFour from './components/InfoSectionFour';
+import { InfoDataFour } from './data/InfoDataFour';
+import Container  from '@mui/material/Container';
+
 // import { AboutMenuData } from './data/AboutMenuData';
 
 
@@ -26,13 +32,14 @@ function App() {
   return (
     <>
     <GlobalStyle/>
-    <Navbar toggle={toggle}/>
-    {/* <AboutMenuData isOpen={isOpen} toggle={toggle}/> */}
+    <Navbar toggle={toggle} {...NavDropdown} />
     <Dropdown isOpen={isOpen} toggle={toggle} />
+    {/* <NavDropdown /> */}
     <Hero slides={SliderData} />
     <InfoSection {...InfoData}/>
     <InfoSectionTwo {...InfoDataTwo}/>
     <InfoSectionThree  {...InfoDataThree}/>
+    <InfoSectionFour data={InfoDataFour}/>
     
     </>
   );

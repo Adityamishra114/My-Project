@@ -20,6 +20,7 @@ const InfoCard = () => {
       <Grid container spacing={2} sx={{flexDirection:'columns', justifyContent:'space-around', borderRadius:"50px",  position: "relative",
   animation: "myfirst 5s infinite",
   animationDirection: "alternate",
+  // transition: "top 1s linear",
 "@keyframes myfirst":{
  "0%" :  {left: "0px", top: "0px"},
   "25%" : {left: "20px", top: "0px"},
@@ -34,6 +35,7 @@ const InfoCard = () => {
                 component="img"
                 height="120"
                 width="60"
+                objectfit="cover"
                 border='2px solid black'
                 image={process.env.PUBLIC_URL + "/computervision.jpg"}
                 alt="green iguana"

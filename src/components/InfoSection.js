@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "./Button";
 import { FiArrowRight } from "react-icons/fi";
 import InfoCard from "./InfoCard";
+import CountUp from 'react-countup';
 
 // import { CardActionArea } from "@mui/material";
 
@@ -27,8 +28,8 @@ const ColumnLeft = styled.div`
   justify-content: center;
   align-items: flex-start;
   line-height: 1.4;
-  padding: 1rem 2rem;
-  margin-bottom:280px;
+  padding: 1rem 3rem;
+  margin-bottom: 2px;
 
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
@@ -42,6 +43,7 @@ const ColumnLeft = styled.div`
     font-size: 23px;
   }
 `;
+// const Wrapper = styled.div``;
 const Arrow = styled(FiArrowRight)``;
 const ColumnRight = styled.div`
   padding: 1rem 2rem;
@@ -50,11 +52,14 @@ const ColumnRight = styled.div`
   // align-items: center;
   order: ${({ reverse }) => (reverse ? "1" : "2")};
 
-  // @media screen and (max-width: 768px) {
-  //   // order: ${({ reverse }) => (reverse ? "2" : "1")};
-   
-  // }
- 
+  @media screen and (max-width: 768px) {
+    // order: ${({ reverse }) => (reverse ? "2" : "1")};
+    justify-content: space-around;
+    display: column;
+    flex-direction: column;
+    // margin: 120px 120px;
+    // padding:60px 20px;
+  }
 
   // img {
   //   width: 100%;
@@ -81,6 +86,24 @@ const InfoSection = ({ heading, paragraph, buttonLabel, image }) => {
           <Button className="btn-hover" to="/">
             {buttonLabel} <Arrow />
           </Button>
+          <div className="container">
+            <span className="prefix">$</span>
+            <span className="counter-number"><CountUp duration={2} separator="." start={0} end={4}/></span>
+            <span className="suffix">Bn+</span>
+          </div>
+          <div className="title">Value Unlocked for Clients</div>
+          <div className="wrapper">
+            <span className="prefix"></span>
+            <span className="counter-number"><CountUp duration={2} separator="." start={0} end={10}/></span>
+            <span className="suffix">+</span>
+          </div>
+          <div className="title">Clients</div>
+          <div className="wrapper">
+            <span className="prefix"></span>
+            <span className="counter-number"><CountUp duration={2} separator="." start={30} end={40}/></span>
+            <span className="suffix">+</span>
+          </div>
+          <div className="title">Employees</div>
         </ColumnLeft>
         <ColumnRight>
           <InfoCard />

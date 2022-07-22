@@ -69,30 +69,30 @@ const ColumnRight = styled.div`
   // justify-content: center;
   // align-items: center;
   order: ${({ reverse }) => (reverse ? "1" : "2")};
-  @keyframes slideInFromLeft {
+  @keyframes slideInFromRight {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
     100% {
-      transform: translateX(0);
+      transform: translate-X(0);
     }
   }
 
   @media screen and (max-width: 768px) {
     order: ${({ reverse }) => (reverse ? "2" : "1")};
-    animation: 5s ease-out 4s 1 slideInFromLeft;
+    animation: 5s ease-out 4s 1 slideInFromRight;
   }
 
   img {
     height: 100%;
     width: 100%;
     margin-left: 1rem;
-    animation: 5s ease-out 4s 1 slideInFromLeft;
+    animation: 5s ease-out 4s 1 slideInFromRight;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     order: ${({ reverse }) => (reverse ? "2" : "1")};
-    animation: 5s ease-out 4s 1 slideInFromLeft;
+    animation: 5s ease-out 4s 1 slideInFromRight;
   }
 `;
 const Btn = styled.button`

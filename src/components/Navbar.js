@@ -6,10 +6,7 @@ import { menuData } from "../data/MenuData";
 import { FaBars } from "react-icons/fa";
 import logo from "../images/logo.png";
 import NavDropdown from "./NavDropdown";
-
-
-
-
+import NavMenuItem from "./NavMenuItem";
 
 const Nav = styled.nav`
   height: 70px;
@@ -35,17 +32,18 @@ const NavLink = css`
     color: #000000;
   }
 
-  &:hover {
-    background: #e81038;
-    border-radius: 12px;
-  }
+  // &:hover {
+  //   background: #e81038;
+  //   border-radius: 50%;
+  // }
 `;
-const Nav_bg = css`
-background-color:#4aa832;`;
+// const Nav_bg = styled.div`
+// background-color:#8c07f2;`;
 const NavMenuLinks = styled(Link)`
   ${NavLink}
 `;
-let LogoImage = styled.img`
+// const NavLogo = styled(Link)``;
+const LogoImage = styled.img`
   background-image: url(../images/logo.png);
   cursor: pointer;
 `;
@@ -70,15 +68,16 @@ const MenuBars = styled.div`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 5px;
+  font-size: 20px;
 
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 const Navbar = ({ toggle }) => {
-
   const [color, setColor] = useState(false);
+
   const changeColor = () => {
     if (window.scrollY >= 70) {
       setColor(true);
@@ -89,18 +88,15 @@ const Navbar = ({ toggle }) => {
   window.addEventListener("scroll", changeColor);
   return (
     <Nav className={color ? " Nav, Nav_bg" : "Nav"}>
-      {/* <Link to='/'><img src={logo} alt="Logo" />;</Link> */}
-      <LogoImage to={"/"} src={logo} />
-      <MenuBars onClick={toggle} >
+      {/* <Link to='/'><img src={logo} alt="Logo" /></Link> */}
+      <LogoImage to="/" src={logo} />
+      <MenuBars onClick={toggle}>
         <FaBars />
       </MenuBars>
-      <NavMenu >
+      <NavMenu>
         {menuData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
-            {item.title}
-          </NavMenuLinks>
+          <NavMenuItem item={item} key={index} index={index} />
         ))}
-        {/* <NavDropdown/> */}
       </NavMenu>
     </Nav>
   );

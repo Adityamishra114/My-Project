@@ -147,7 +147,7 @@ const PrevArrow = styled(IoArrowBack)`
     transform: scale(1.05);
   }
   @media screen and (max-width: 768px) {
-    margin-right:1rem;
+    margin-right:1rem ! important;
     
     
   }
@@ -171,7 +171,7 @@ const NextArrow = styled(IoArrowForward)`
     transform: scale(1.05);
   }
   @media screen and (max-width: 768px) {
-    margin-left:37rem;
+    margin-left:37rem ! important;
     
   }
 `;
