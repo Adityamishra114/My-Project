@@ -76,7 +76,7 @@ const InfoSectionFour = () => {
             maxWidth="lg"
             key={index}
             style={{
-              width: "70%",
+              width: "33%",
               display: "flex",
               flexDirection: index % 2 !== 0 ? "row-reverse" : "row",
               flexWrap: "wrap",
@@ -100,8 +100,9 @@ const InfoSectionFour = () => {
                 borderRadius: "50%",
                 backgroundColor: "#262fd4",
                 boxShadow: "0 10px 30px 0 rgb(1 1 64 / 8%)",
-                width: "80px",
-                height: "80px",
+                // width: "80px",
+                // height: "80px",
+                width: "33%",
                 textAlign: "center",
                 margin: "0 auto",
                 fontSize: "30px",
@@ -121,7 +122,7 @@ const InfoSectionFour = () => {
                 margin: "0 auto",
                 justifyContent: "space-between",
                 // alignItems: "center",
-                width: "200px",
+                width: "33%",
                 animation: "5s ease-out 4s 1 slideInFromRight",
               }}
             >
