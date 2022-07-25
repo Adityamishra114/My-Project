@@ -47,18 +47,19 @@ const NavMenuItem = ({ item, index }) => {
       {item.submenu && showDropDown && (
         <ul
           style={{
-            backgroundColor: "grey",
+            backgroundColor: "#f9f9f9",
             position: "absolute",
             display: "flex",
             alignItems: "center",
             justifyContent: "start",
             flexDirection: "column",
-            top: "40px",
+            top: "60px",
             gap: "10px",
             listStyle: "none",
             lineHeight: "21px",
-            zIndex: "999",
-            minWidth: "100%",
+            minWidth: "200px",
+            boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+            zIndex: "1",
           }}
         >
           {item.submenu.map((submenuItem, index) => (

@@ -1,4 +1,4 @@
-import  Grid  from "@mui/material/Grid";
+import Grid from "@mui/material/Grid";
 import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -8,117 +8,187 @@ import { CardActionArea } from "@mui/material";
 // import useMediaQuery from "@mui/material/useMediaQuery";
 // import { maxWidth } from "@mui/system";
 
-
-
-
 const InfoCard = () => {
   // const matches = useMediaQuery(
   //   maxWidth = "md",
   // matches= {matches}
   // )
-  return (<>
-      <Grid container spacing={2} sx={{flexDirection:'columns', justifyContent:'space-around', borderRadius:"50px",  position: "relative",
-  animation: "myfirst 5s infinite",
-  animationDirection: "alternate",
-  // transition: "top 1s linear",
-"@keyframes myfirst":{
- "0%" :  {left: "0px", top: "0px"},
-  "25%" : {left: "20px", top: "0px"},
-  "50%"  :{left: "20px", top: "20px"},
-  "75%" : {left: "0px", top: "20px"},
-  "100%": {left: "0px", top: "0px"},
-}}} >
+  return (
+    <>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          flexDirection: "columns",
+          justifyContent: "space-around",
+          borderRadius: "50px",
+          position: "relative",
+          animation: "myfirst 5s infinite",
+          animationDirection: "alternate",
+          // transition: "top 1s linear",
+          "@keyframes myfirst": {
+            "0%": { left: "0px", top: "0px" },
+            "25%": { left: "20px", top: "0px" },
+            "50%": { left: "20px", top: "20px" },
+            "75%": { left: "0px", top: "20px" },
+            "100%": { left: "0px", top: "0px" },
+          },
+        }}
+        // style={{
+        //   ["@media (min-width:768px)"]: {
+        //     width: "80%",
+        //     display: "flex",
+        //     flexDirection: "column",
+        //     justifyContent: "space-between",
+        //   },
+        // }}
+      >
         <Grid item xs={2} md={5}>
-          <Card sx={{ maxWidth: 345, height:"200px", width:"230px", backgroundColor: '#757de8' }} >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="120"
-                width="60"
-                objectfit="cover"
-                border='2px solid black'
-                image={process.env.PUBLIC_URL + "/computervision.jpg"}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Computer-Vision
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          <div>
+            <Card
+              sx={{
+                maxWidth: 345,
+                height: "200px",
+                width: "230px",
+                backgroundColor: "#757de8",
+              }}
+              // style={{
+              //   ["@media (min-width:768px)"]: {
+              //     width: "80%",
+              //     display: "flex",
+              //     flexDirection: "column",
+              //     justifyContent: "space-between",
+              //     overFlow: "hidden",
+              //   },
+              // }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="120"
+                  width="60"
+                  objectfit="cover"
+                  border="2px solid black"
+                  image={process.env.PUBLIC_URL + "/computervision.jpg"}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Computer-Vision
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
         </Grid>
         <Grid item xs={2} md={5}>
-          <Card sx={{ maxWidth: 345, height:"200px", width:"230px", backgroundColor:'#757de8' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="120"
-                width="60"
-                image={process.env.PUBLIC_URL + "/ReinforcementLearning.jpg"}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Reinforcement Learning
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          <div>
+            <Card
+              sx={{
+                maxWidth: 345,
+                height: "200px",
+                width: "230px",
+                backgroundColor: "#757de8",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="120"
+                  width="60"
+                  image={process.env.PUBLIC_URL + "/ReinforcementLearning.jpg"}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Reinforcement Learning
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
         </Grid>
-        <Grid item xs={8} >
-          <Card sx={{ maxWidth: 345, height:"200px", width:"230px", backgroundColor:'#757de8', marginLeft:'60px'}}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="120"
-                width="60"
-                image={process.env.PUBLIC_URL + "/ML-DL.jpg"}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Machine Learning -Deep Learning
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+        <Grid item xs={8}>
+          <div>
+            <Card
+              sx={{
+                maxWidth: 345,
+                height: "200px",
+                width: "230px",
+                backgroundColor: "#757de8",
+                marginLeft: "60px",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="120"
+                  width="60"
+                  image={process.env.PUBLIC_URL + "/ML-DL.jpg"}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Machine Learning -Deep Learning
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
         </Grid>
         <Grid item xs={2} md={5}>
-          <Card sx={{ maxWidth: 345, height:"200px", width:"230px", backgroundColor:'#757de8' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="120"
-                width="60"
-                image={process.env.PUBLIC_URL + "/Nlp.jpg"}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                 NLP
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          <div>
+            <Card
+              sx={{
+                maxWidth: 345,
+                height: "200px",
+                width: "230px",
+                backgroundColor: "#757de8",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="120"
+                  width="60"
+                  image={process.env.PUBLIC_URL + "/Nlp.jpg"}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    NLP
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
         </Grid>
         <Grid item xs={2} md={5}>
-          <Card sx={{ maxWidth: 345, height:"200px", width:"230px", backgroundColor:'#757de8' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="120"
-                width="60"
-                image={process.env.PUBLIC_URL + "/PredictiveAnalytics.jpg"}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                 Predictive Analytics
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          <div>
+            <Card
+              sx={{
+                maxWidth: 345,
+                height: "200px",
+                width: "230px",
+                backgroundColor: "#757de8",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="120"
+                  width="60"
+                  image={process.env.PUBLIC_URL + "/PredictiveAnalytics.jpg"}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Predictive Analytics
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
         </Grid>
       </Grid>
     </>

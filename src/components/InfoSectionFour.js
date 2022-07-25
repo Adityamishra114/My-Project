@@ -2,9 +2,8 @@ import React from "react";
 import Container from "@mui/material/Container";
 import { InfoDataFour } from "../data/InfoDataFour";
 import styled from "styled-components";
-// import styled from 'styled-components';
+
 import GlobalStyle from "../globalStyles";
-import { useMediaQuery } from "@mui/material";
 
 const Section = styled.div`
   height: 100%;
@@ -13,17 +12,16 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  @media screen and (max-width: 768px) {
-    // animation5s ease-out 4s 1 slideInFromRight;
-    // animation: 5s ease-out 4s 1 slideInFromLeft;
-    gap: 2rem;
-    // margin-top: "30rem";
-  }
+  // @media screen and (max-width: 768px) {
+  //   // animation5s ease-out 4s 1 slideInFromRight;
+  //   // animation: 5s ease-out 4s 1 slideInFromLeft;
+  //   gap: 2rem;
+  //   // margin-top: "30rem";
+  // }
 `;
 
 // const Section = styled.section``;
 const InfoSectionFour = () => {
-  const matches = useMediaQuery("(min-width:768px)");
   const { image, number, heading, paragraph } = InfoDataFour[0];
 
   return (
@@ -76,44 +74,49 @@ const InfoSectionFour = () => {
             maxWidth="lg"
             key={index}
             style={{
-              width: "70%",
+              width: "60%",
               display: "flex",
               flexDirection: index % 2 !== 0 ? "row-reverse" : "row",
               flexWrap: "wrap",
               alignItems: "center",
-              justifyContent: "space-around",
+              justifyContent: "center",
               order: '${({ reverse }) => (reverse ? "1" : "2")}',
             }}
           >
-            {/* {`(min-width:768px) matches:${matches}`} */}
             <img
               src={item.image}
               alt="info1"
               style={{
-                height: "398px",
-                width: "306px",
                 animation: "5s ease-out 4s 1 slideInFromLeft",
+                width: "33%",
               }}
             />
-            <span
+            <div
               style={{
-                borderRadius: "50%",
-                backgroundColor: "#262fd4",
-                boxShadow: "0 10px 30px 0 rgb(1 1 64 / 8%)",
-                width: "80px",
-                height: "80px",
-                textAlign: "center",
-                margin: "0 auto",
-                fontSize: "30px",
-                color: "#fff",
-                fontWeight: "500",
-                lineHeight: "80px",
                 display: "flex",
-                justifyContent: "center",
+                width: "33%",
               }}
             >
-              {item.number}
-            </span>
+              <span
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  textAlign: "center",
+                  margin: "0 auto",
+                  fontSize: "30px",
+                  fontWeight: "500",
+                  lineHeight: "80px",
+                  display: "flex",
+                  backgroundColor: "#262fd4",
+                  color: "#fff",
+                  justifyContent: "center",
+                  borderRadius: "50%",
+                  boxShadow: "0 10px 30px 0 rgb(1 1 64 / 8%)",
+                }}
+              >
+                {item.number}
+              </span>
+            </div>
             <div
               style={{
                 display: "grid",
@@ -121,8 +124,8 @@ const InfoSectionFour = () => {
                 margin: "0 auto",
                 justifyContent: "space-between",
                 alignItems: "center",
-                width: "200px",
                 animation: "5s ease-out 4s 1 slideInFromRight",
+                width: "33%",
               }}
             >
               <h4 style={{ fontSize: "25px", fontWeight: "200px" }}>
@@ -141,7 +144,7 @@ const InfoSectionFour = () => {
             </div>
           </Container>
         ))}
-        ;{/* </Section> */}
+        ;
       </Section>
     </>
   );
