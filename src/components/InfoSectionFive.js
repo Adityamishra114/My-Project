@@ -19,6 +19,7 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px;
   position: absolute;
+  gap: 18rem;
 
   img {
     display: grid;
@@ -50,11 +51,23 @@ const ColumnLeft = styled.div`
 `;
 
 const ColumnRight = styled.div`
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  // padding: 1rem 2rem;
+  // display: flex;
+  // justify-content: center;
+  // align-items: flex-start;
   width: 100%;
+  margin: 2px 2px;
+  align-content: center;
+  // justify-content: space-around;
+  //   
+  //   display: inline-flex;
+  //   flex-wrap: wrap;
+  //   flex-direction: row;
+  //   align-content: center;
+  //   align-items: center;
+  //   gap: 3rem;
+  
+}
   order: ${({ reverse }) => (reverse ? "1" : "2")};
 
   @media screen and (max-width: 768px) {
@@ -88,9 +101,6 @@ const InfoSectionFive = ({ heading, image }) => {
             justifyContent: "center",
             alignItem: "flex-start",
             fontSize: "20px",
-            // fontSize: "20px",
-            // boxShadow: "0 10px 30px 0 rgb(1 1 64 / 8%)",
-            // width: "100%",
           }}
         >
           <span>
@@ -99,9 +109,14 @@ const InfoSectionFive = ({ heading, image }) => {
             {InfoDataFive.title.map((title, index) => (
               <div
                 style={{
-                  // fontSize: "20px",
-                  // marginRight: "10px",
-                  justifyContent: "center",
+                  justifyContent: "start",
+                  margin: "2px 2px",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  flexDirection: "row",
+                  alignContent: "center",
+                  alignItems: "center",
+                  gap: "3rem",
                 }}
                 key={index}
               >

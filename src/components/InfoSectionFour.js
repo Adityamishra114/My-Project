@@ -12,12 +12,13 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  // @media screen and (max-width: 768px) {
-  //   // animation5s ease-out 4s 1 slideInFromRight;
-  //   // animation: 5s ease-out 4s 1 slideInFromLeft;
-  //   gap: 2rem;
-  //   // margin-top: "30rem";
-  // }
+  @media screen and (max-width: 768px) {
+    // animation5s ease-out 4s 1 slideInFromRight;
+    // animation: 5s ease-out 4s 1 slideInFromLeft;
+    gap: 2rem;
+    margin-top: "80rem";
+    position: "relative";
+  }
 `;
 
 // const Section = styled.section``;

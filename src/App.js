@@ -13,12 +13,17 @@ import { InfoDataThree } from "./data/InfoDataThree";
 import NavDropdown from "./components/NavDropdown";
 import InfoSectionFive from "./components/InfoSectionFive";
 import { InfoDataFive } from "./data/InfoDataFive";
+import InfoSectionSix from "./components/InfoSectionSix";
+import { InfoDataSix } from "./data/InfoDataSix";
 
 import InfoCard from "./components/InfoCard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InfoSectionFour from "./components/InfoSectionFour";
 import { InfoDataFour } from "./data/InfoDataFour";
 import Container from "@mui/material/Container";
+import InfoSectionSeven from "./components/InfoSectionSeven";
+import InfoSectionEight from "./components/InfoSectionEight";
+import { InfoDataEight } from "./data/InfoDataEight";
 
 // import { AboutMenuData } from './data/AboutMenuData';
 
@@ -40,6 +45,9 @@ function App() {
       <InfoSectionThree {...InfoDataThree} />
       <InfoSectionFour data={InfoDataFour} />
       <InfoSectionFive {...InfoDataFive} />
+      <InfoSectionSix {...InfoDataSix} />
+      <InfoSectionSeven />
+      <InfoSectionEight {...InfoDataEight} />
     </>
   );
 }
