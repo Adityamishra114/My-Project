@@ -11,6 +11,7 @@ const Section = styled.section`
   width: 100%;
   height: 100%;
   margin-top: 43rem;
+
   h1 {
     margin-left: 120px;
     justify-content: center;
@@ -39,44 +40,19 @@ const InfoSectionSix = () => {
     <>
       <Section>
         <h1>{heading}</h1>
-        <p>{paragraph}</p>
+        <div style={{ fontSize: "26px" }}>
+          <p>{paragraph}</p>
+        </div>
         {/* <div> */}
 
-        <Grid
-          container
-          sx={{
-            flexDirection: { xs: "column", md: "row" },
-            // animation: "spin 2s linear infinite",
-            // "@keyframes spin": {
-            //   "0%": {
-            //     transform: "rotate(360deg)",
-            //   },
-            //   "100%": {
-            //     transform: "rotate(0deg)",
-            //   },
-            // },
+        <div
+          style={{
+            display: "flex",
+            gap: "1rem",
+            overflowX: "auto",
+            margin: "10px 10px",
+            flexDirection: "row",
           }}
-          spacing={6}
-          // style={{
-          //   "@keyframes spin": {
-          //     "0%": {
-          //       transform: "rotate(360deg)",
-          //     },
-          //     "100%": {
-          //       transform: "rotate(0deg)",
-          //     },
-          //   },
-          // }}
-          direction="flex"
-          overflowX="auto"
-          wrap="nowrap"
-          // flexWrap="wrap"
-          // justify="flex-start"
-          // alignItems="flex-start"
-          margin="10px 10px"
-          flexDirection="row"
-          // animation="$spin 2s linear infinite"
-          // gridTemplateColumns="4fr 1fr "
         >
           {InfoDataSix.map((item, index) => {
             if (index === 0) return;
@@ -84,7 +60,7 @@ const InfoSectionSix = () => {
               <Card
                 key={index}
                 sx={{
-                  maxWidth: "35%",
+                  minWidth: "35%",
                   marginTop: "20px",
                   gap: "3rem",
                   display: "flex",
@@ -92,18 +68,6 @@ const InfoSectionSix = () => {
                   height: "480px",
                   marginLeft: "40px",
                 }}
-                // style={{
-                //   "@keyframes spin": {
-                //     "0%": {
-                //       transform: "rotate(360deg)",
-                //     },
-                //     "100%": {
-                //       transform: "rotate(0deg)",
-                //     },
-                //   },
-                // }}
-                // animation="$spin 2s linear infinite"
-                //   style={{ display: "grid", flexDirection: "column", gap: "2rem" }}
               >
                 <CardMedia
                   style={{
@@ -118,7 +82,7 @@ const InfoSectionSix = () => {
                   }}
                   key={index}
                   component="img"
-                  alt="green iguana"
+                  alt="synlabs"
                   height="60"
                   src={item.image}
                 />
@@ -160,7 +124,7 @@ const InfoSectionSix = () => {
               </Card>
             );
           })}
-        </Grid>
+        </div>
         {/* </div> */}
       </Section>
     </>

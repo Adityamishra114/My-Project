@@ -24,6 +24,14 @@ import Container from "@mui/material/Container";
 import InfoSectionSeven from "./components/InfoSectionSeven";
 import InfoSectionEight from "./components/InfoSectionEight";
 import { InfoDataEight } from "./data/InfoDataEight";
+import InfoSectionNine from "./components/InfoSectionNine";
+import InfoSectionTen from "./components/InfoSectionTen";
+import InfoSectionE from "./components/InfoSectionE";
+import InfoSectionTW from "./components/InfoSectionTW";
+import InfoSectionTh from "./components/InfoSectionTh";
+import { InfoDataTh } from "./data/InfoDataTh";
+import InfoSectionFr from "./components/InfoSectionFr";
+import { FooterContainer } from "./containers/footer";
 
 // import { AboutMenuData } from './data/AboutMenuData';
 
@@ -40,7 +48,7 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       {/* <NavDropdown /> */}
       <Hero slides={SliderData} />
-      <InfoSection {...InfoData} />
+      {/* <InfoSection {...InfoData} />
       <InfoSectionTwo {...InfoDataTwo} />
       <InfoSectionThree {...InfoDataThree} />
       <InfoSectionFour data={InfoDataFour} />
@@ -48,6 +56,13 @@ function App() {
       <InfoSectionSix {...InfoDataSix} />
       <InfoSectionSeven />
       <InfoSectionEight {...InfoDataEight} />
+      <InfoSectionNine />
+      <InfoSectionTen />
+      <InfoSectionE />
+      <InfoSectionTW />
+      <InfoSectionTh {...InfoDataTh} />
+      <InfoSectionFr /> */}
+      <FooterContainer />
     </>
   );
 }

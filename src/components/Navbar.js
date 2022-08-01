@@ -32,10 +32,12 @@ const NavLink = css`
     color: #000000;
   }
 
-  // &:hover {
-  //   background: #e81038;
-  //   border-radius: 50%;
-  // }
+  &:hover {
+    background: #e81038;
+    border-radius: 6px;
+    // padding: 11px;
+    width: 200px;
+  }
 `;
 // const Nav_bg = styled.div`
 // background-color:#8c07f2;`;
@@ -88,8 +90,10 @@ const Navbar = ({ toggle }) => {
   window.addEventListener("scroll", changeColor);
   return (
     <Nav className={color ? " Nav, Nav_bg" : "Nav"}>
-      {/* <Link to='/'><img src={logo} alt="Logo" /></Link> */}
-      <LogoImage to="/" src={logo} />
+      {/* <Link to="/">
+        <img src={logo} alt="Logo" style={{ height: "120px", width: "80px" }} />
+      </Link> */}
+      <LogoImage to={"/"} src={logo} />
       <MenuBars onClick={toggle}>
         <FaBars />
       </MenuBars>

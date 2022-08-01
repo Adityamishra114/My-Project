@@ -6,13 +6,8 @@ import CardContent from "@mui/material/CardContent";
 import styled from "styled-components";
 import { InfoDataEight } from "../data/InfoDataEight";
 import { Button } from "./Button";
-import { width } from "@mui/system";
-// import Intm from "../images/Intm.png";
-// import Frenc from "../images/Frenc.png";
-// import logo from "../images/logo.png";
 import { AiOutlineCheck } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
-// import { icons } from "react-icons/lib";
 
 const Section = styled.section`
   width: 100%;
@@ -26,26 +21,27 @@ const Section = styled.section`
     font-size: 30px;
   }
 `;
-// const Btn = styled.button`
-//   background-color: blue;
-//   color: white;
-//   font-size: 20px;
-//   padding: 10px 45px;
-//   border-radius: 5px;
-//   margin: 10px 5px;
-//   line-height: 1.5;
-//   cursor: pointer;
-//   animation: 5s ease-out 4s 1 slideInFromLeft;
 
-//   &:hover {
-//     background-color: transparent;
-//     color: black;
-//     font-family: "Montserrat", sans-serif;
-//   }
-// `;
+const Btn = styled.button`
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  padding: 10px 45px;
+  border-radius: 45px;
+  margin: 10px 5px;
+  line-height: 1.5;
+  cursor: pointer;
+  // animation: 5s ease-out 4s 1 slideInFromLeft;
+
+  &:hover {
+    background-color: transparent;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+  }
+`;
 
 const InfoSectionEight = () => {
-  const { heading, image, title, buttonLabel, icons } = InfoDataEight[0];
+  const { heading, image, title, buttonLabel, icon } = InfoDataEight[0];
   return (
     <Section>
       <h3>Competitive Advantage</h3>
@@ -63,6 +59,9 @@ const InfoSectionEight = () => {
               height: "550px",
               marginLeft: "20px",
               marginRight: "20px",
+              "&:hover": {
+                border: "2px solid black",
+              },
             }}
           >
             <Card
@@ -92,7 +91,13 @@ const InfoSectionEight = () => {
               </Typography>
             </CardContent>
             <CardContent>
-              <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <Typography
                   key={index}
                   gutterBottom
@@ -103,35 +108,55 @@ const InfoSectionEight = () => {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      alignItems: "center",
                       lineHeight: "2.5rem",
                       marginTop: "20px",
                     }}
                   >
                     {item.title.map((title) => (
-                      <h5
+                      <div
                         style={{
                           display: "flex",
-                          flexDirection: "start",
-                          alignItems: "center",
-                          gap: "5px",
+                          flexDirection: "row",
                         }}
                       >
-                        <div key={index}>
-                          <i>{icons}</i>
-                        </div>
-                        {/* {" "}
-                        <AiOutlineCheck /> */}
-                        {title}
-                      </h5>
+                        <h5
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            gap: "15px",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <span
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                            }}
+                          >
+                            {item.icon}
+                          </span>
+
+                          {title}
+                        </h5>
+                      </div>
                     ))}
                   </div>
                 </Typography>
               </div>
             </CardContent>
-            {/* <div key={index}>
-              <Button>{buttonLabel}</Button>
-            </div> */}
+            {item.buttonLabel && (
+              <div
+                key={index}
+                style={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                  display: "flex",
+                }}
+              >
+                <Btn>{item.buttonLabel}</Btn>
+              </div>
+            )}
           </Card>
         ))}
       </div>

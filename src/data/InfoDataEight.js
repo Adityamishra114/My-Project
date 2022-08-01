@@ -8,7 +8,7 @@ export const InfoDataEight = [
   {
     heading: "Internal Team",
     image: Intm,
-    icons: IoMdClose,
+    icon: <IoMdClose />,
     title: [
       "6- 20 weeks onboard",
       "Individual Engagement",
@@ -21,7 +21,7 @@ export const InfoDataEight = [
   {
     heading: "Freelancers",
     image: Frenc,
-    icons: IoMdClose,
+    icon: <IoMdClose />,
     title: [
       "4- 10 weeks onboard",
       "Individual Engagement",
@@ -34,7 +34,7 @@ export const InfoDataEight = [
   {
     heading: "SynergyLabs",
     image: logo,
-    icons: AiOutlineCheck,
+    icon: <AiOutlineCheck />,
     title: [
       " 4 - 6 weeks to onboard",
       "Organizational Engagement",

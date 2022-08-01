@@ -9,10 +9,6 @@ import { CardActionArea } from "@mui/material";
 // import { maxWidth } from "@mui/system";
 
 const InfoCard = () => {
-  // const matches = useMediaQuery(
-  //   maxWidth = "md",
-  // matches= {matches}
-  // )
   return (
     <>
       <Grid
@@ -34,14 +30,6 @@ const InfoCard = () => {
             "100%": { left: "0px", top: "0px" },
           },
         }}
-        // style={{
-        //   ["@media (min-width:768px)"]: {
-        //     width: "80%",
-        //     display: "flex",
-        //     flexDirection: "column",
-        //     justifyContent: "space-between",
-        //   },
-        // }}
       >
         <Grid item xs={2} md={5}>
           <div>
@@ -52,15 +40,6 @@ const InfoCard = () => {
                 width: "230px",
                 backgroundColor: "#757de8",
               }}
-              // style={{
-              //   ["@media (min-width:768px)"]: {
-              //     width: "80%",
-              //     display: "flex",
-              //     flexDirection: "column",
-              //     justifyContent: "space-between",
-              //     overFlow: "hidden",
-              //   },
-              // }}
             >
               <CardActionArea>
                 <CardMedia
